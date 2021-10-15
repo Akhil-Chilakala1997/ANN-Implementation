@@ -14,7 +14,7 @@ def create_model(LOSS_FUNCTION,OPTIMIZER,METRICS,num_classes):
 
 
 def get_unique_filename(filename):
-        unique_filename = time.strftime(f"%Y%m%d_%H%M%S_{filename}.h5")
+        unique_filename = time.strftime(f"%Y%m%d_%H%M%S_{filename}")
         return unique_filename
 
 def save_model(model_clf,model_name,model_dir):
