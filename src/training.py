@@ -16,12 +16,12 @@ def training(config_path):
     VALIDATION = (x_valid, y_valid)
 
     history = model_clf.fit(x_train, y_train, epochs=EPOCHS, validation_data=VALIDATION)
-    #artifacts_dir = config["artifacts"]["artifacts_dir"]
+    artifacts_dir = config["artifacts"]["artifacts_dir"]
     model_dir = config["artifacts"]["model_dir"]
-    #model_dir_path = os.path.join(artifacts_dir,model_dir)
-    os.makedirs(model_dir,exist_ok = True)
+    model_dir_path = os.path.join(artifacts_dir,model_dir)
+    os.makedirs(model_dir_path,exist_ok = True)
     model_name = config["artifacts"]["model_name"]
-    save_model(model_clf,model_name,model_dir)
+    save_model(model_clf,model_name,model_dir_path)
 
 
 
